@@ -1,21 +1,20 @@
 # SAPI ROM Modul
 
-Projekt ROM modulu pro poÄŤĂ­taÄŤ SAPI. SloĹľka `Wincupl1` obsahuje zdroj logiky GAL, testovacĂ­ vektory a vĂ˝slednĂ˝ soubor JEDEC.
+Projekt ROM modulu pro počítač SAPI. Složka `Wincupl1` obsahuje zdroj logiky GAL, testovací vektory a výsledný soubor JEDEC.
 
-## SchĂ©ma
+## Schéma
 
-![SchĂ©ma SAPI ROM modulu](rommodul.png)
+![Schéma SAPI ROM modulu](rommodul.png)
 
-SchĂ©ma je pĹ™evedenĂ© na bĂ­lĂ© pozadĂ­ pro lepĹˇĂ­ ÄŤitelnost a tisk.
+Schéma má bílé pozadí pro lepší čitelnost na obrazovce i při tisku.
 
 ## Obsah
 
-- `rommodul.png` â€“ schĂ©ma zapojenĂ­.
-- `Wincupl1/gal1.pld` â€“ zdrojovĂ˝ nĂˇvrh CUPL pro GAL.
-- `Wincupl1/gal1.sim` â€“ vstupnĂ­ vektory pro simulaci.
-- `Wincupl1/gal1.jed` â€“ vĂ˝slednĂ˝ JEDEC soubor pro naprogramovĂˇnĂ­ GAL.
+- `rommodul.png` – schéma zapojení.
+- `Wincupl1/gal1.pld` – zdrojový návrh CUPL pro GAL.
+- `Wincupl1/gal1.sim` – vstupní vektory pro simulaci.
+- `Wincupl1/gal1.jed` – výsledný JEDEC soubor pro naprogramování GAL.
 
-## PoznĂˇmky
+## Poznámky
 
-ZdrojovĂ˝ nĂˇvrh a JEDEC soubor jsou poskytnutĂ© tak, jak jsou. PĹ™ed pouĹľitĂ­m v zaĹ™Ă­zenĂ­ ovÄ›Ĺ™te zapojenĂ­, cĂ­lovĂ˝ typ GAL a vĂ˝sledek programovĂˇnĂ­.
-
+Zdrojový návrh a soubor JEDEC jsou poskytnuty tak, jak jsou. Před použitím v zařízení ověřte zapojení, cílový typ GAL a výsledek programování.
