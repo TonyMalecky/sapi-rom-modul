@@ -1,0 +1,62 @@
+Name     SAPIROM1;
+Partno   001;
+Date     08/10/2026;
+Revision 01;
+Designer HMA;
+Company  SAPI;
+Assembly MEgarom;
+Location Usti;
+Device   g16v8;
+
+/*******************************************************************/
+/*                                                                 */
+/*  SAPI v1.1 MEgarom - Mapovani pinu pro GAL16V8                  */
+/*                                                                 */
+/*******************************************************************/
+
+/* Vstupni piny (1 az 9) a hodinovy signal (1) */
+Pin 1  = CLK;
+Pin 2  = A0;
+Pin 3  = A1;
+Pin 4  = A2;
+Pin 5  = A3;
+Pin 6  = INT1;
+Pin 7  = INT2;
+Pin 8  = A15;
+Pin 9  = D0X;
+
+/* Vystupni a vstupni piny (11 az 19) */
+
+Pin 12 = AR15;
+Pin 13 = AR16;
+Pin 14 = AR17;
+Pin 15 = AR18;
+Pin 16 = D1X;	    /* Tento pin funguje jako cisty VSTUP */
+Pin 17 = D0;          /* Vystup s rizenym trojstavovym budicem */
+Pin 18 = D1;          /* Vystup s rizenym trojstavovym budicem */
+Pin 19 = SEL;         /* Vystup s rizenym trojstavovym budicem */
+
+/* Poznamka: Piny 10 (GND) a 20 (VCC) se v CUPL deklaracich vynechavaji */
+
+/*******************************************************************/
+/*                                                                 */
+/*  Logicke rovnice (EQUATIONS)                                    */
+/*                                                                 */
+/*******************************************************************/
+
+/* Rizeni trojstavovych budicu datove sbernice */
+D0    = 'b'0;          /* Logicka 0 (GND) */
+D0.OE = !D0X;         /* Aktivni v logicke 0 */
+
+D1    = 'b'0;          /* Logicka 0 (GND) */
+D1.OE = !D1X;         /* Aktivni v logicke 0 */
+
+/* Kombinacni logika pro vyber (Select) */
+SEL   = INT1 # !A15;  /* OR a NOT */
+
+/* Sekvencni logika - Adresove registry pomoci pripony .D */
+/* Hodinovy signal (CLK) je pro tyto makrobunky z pinu 1 prirazen automaticky */
+AR18.D = A3;
+AR17.D = A2;
+AR16.D = A1;
+AR15.D = A0;
