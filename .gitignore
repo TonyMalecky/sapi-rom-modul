@@ -1,0 +1,10 @@
+# WinCUPL build and workspace files
+*.abs
+*.lst
+*.log
+*.pla
+*.si
+*.so
+*.wo
+*.wcp
+
