@@ -14,6 +14,7 @@ Schéma má bílé pozadí pro lepší čitelnost na obrazovce i při tisku.
 - `Wincupl1/gal1.pld` – zdrojový návrh CUPL pro GAL.
 - `Wincupl1/gal1.sim` – vstupní vektory pro simulaci.
 - `Wincupl1/gal1.jed` – výsledný JEDEC soubor pro naprogramování GAL.
+- `Tester_gal/SAPIROM1.lgc` – testovací soubor GAL pro programátor Xgpro.
 - `hardware/gerber/` – Gerber vrstvy a vrtací data pro výrobu DPS.
 
 ## Poznámky
